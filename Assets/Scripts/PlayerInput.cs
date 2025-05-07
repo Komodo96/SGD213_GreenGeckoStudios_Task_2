@@ -5,19 +5,20 @@ public class PlayerInput : MonoBehaviour
 {
     [SerializeField]
     private float moveSpeed = 5f;
-    
+
     [SerializeField]
     private float lookSpeed = 2f;
-    
+
     [SerializeField]
     private float jumpHeight = 2f;
-    
+
     [SerializeField]
     private Transform playerCamera;
 
     private CharacterController controller;
     private Vector3 velocity;
     private bool isGrounded;
+    private float xRotation = 0f;
 
     private void Awake()
     {
@@ -47,6 +48,9 @@ public class PlayerInput : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * lookSpeed;
 
         transform.Rotate(Vector3.up * mouseX);
-        playerCamera.Rotate(Vector3.left * mouseY);
+
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        playerCamera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
     }
 }
