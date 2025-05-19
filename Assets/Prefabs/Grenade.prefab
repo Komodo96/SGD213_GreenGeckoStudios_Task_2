@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5843327620774573015}
   - component: {fileID: 6264036105572613429}
   - component: {fileID: 4055367877960266445}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6425558354229697756}
   - component: {fileID: 1230991575712794864}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grenade
   m_TagString: Player_Weapon_ATK
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ Transform:
   m_GameObject: {fileID: 6462925945792086551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7224125154025878971}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 3588923713625806372}
   - component: {fileID: 3023239620234005506}
   - component: {fileID: 8087189491200559787}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AssaultRifle : MonoBehaviour
+public class AssaultRifle : WeaponBase
 {
-    // Start is called before the first frame update
-    void Start()
+    // Shoot will spawn a new bullet, provided enough time has passed compared to our fireDelay.
+    public override void Shoot()
     {
-        
-    }
+        // get the current time
+        float currentTime = Time.time;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // if enough time has passed since our last shot compared to our fireDelay, spawn our bullet
+        if (currentTime - lastFiredTime > fireDelay)
+        {
+            // create our bullet
+            GameObject newBullet = Instantiate(bullet, bulletSpawnPoint.position, transform.rotation);
+
+            // update our shooting state
+            lastFiredTime = currentTime;
+        }
     }
 }
