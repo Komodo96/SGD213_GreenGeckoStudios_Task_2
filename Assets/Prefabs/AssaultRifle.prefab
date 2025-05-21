@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8835844589456045061}
-  - component: {fileID: -5881195503583946585}
   - component: {fileID: -7266452962572699320}
   m_Layer: 0
   m_Name: AssaultRifle
@@ -35,29 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5881195503583946585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2337880194236380706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bda3a71fec8ef14086a23e656fb95a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: 
-  maxAmmo: 30
-  currentAmmo: 0
-  reserveAmmo: 90
-  fireRate: 0.2
-  damage: 10
-  reloadTime: 1.5
-  bulletPrefab: {fileID: 0}
-  bulletForce: 500
-  firePoint: {fileID: 0}
-  muzzleFlash: {fileID: 0}
 --- !u!114 &-7266452962572699320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,16 +46,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bda3a71fec8ef14086a23e656fb95a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: 
+  weaponName: Assault Rifle
   maxAmmo: 30
-  currentAmmo: 0
+  currentAmmo: 30
   reserveAmmo: 90
   fireRate: 0.2
   damage: 10
   reloadTime: 1.5
   bulletPrefab: {fileID: 5050974976311981045, guid: 31cfb315a6af9744f967d2fb57f98c18, type: 3}
   bulletForce: 500
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 6538256531022592929}
   muzzleFlash: {fileID: 0}
 --- !u!1 &2493190298540241760
 GameObject:

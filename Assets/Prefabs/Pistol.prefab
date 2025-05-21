@@ -106,7 +106,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1813095555592286063}
-  - component: {fileID: 1015453065444481554}
   - component: {fileID: 276177964428144985}
   m_Layer: 0
   m_Name: Pistol
@@ -132,29 +131,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1015453065444481554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587689241984226859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 235faed6943f3bd4194fb30bdbdab762, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: 
-  maxAmmo: 30
-  currentAmmo: 0
-  reserveAmmo: 90
-  fireRate: 0.2
-  damage: 10
-  reloadTime: 1.5
-  bulletPrefab: {fileID: 0}
-  bulletForce: 500
-  firePoint: {fileID: 0}
-  muzzleFlash: {fileID: 0}
 --- !u!114 &276177964428144985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,16 +143,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235faed6943f3bd4194fb30bdbdab762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: 
+  weaponName: Pistol
   maxAmmo: 30
-  currentAmmo: 0
+  currentAmmo: 83
   reserveAmmo: 90
   fireRate: 0.2
   damage: 10
   reloadTime: 1.5
   bulletPrefab: {fileID: 5050974976311981045, guid: 31cfb315a6af9744f967d2fb57f98c18, type: 3}
   bulletForce: 500
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 6914949367147663387}
   muzzleFlash: {fileID: 0}
 --- !u!1 &1821045801025016049
 GameObject:
