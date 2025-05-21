@@ -26,7 +26,7 @@ public class GrenadeThrower : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && currentGrenades > 0)
+        if (Input.GetButtonDown("Fire2") && currentGrenades > 0)
         {
             ThrowGrenade();
         }

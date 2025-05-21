@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 347841506453361050}
   - component: {fileID: 4826023875801687356}
   - component: {fileID: 5112387452230084410}
+  - component: {fileID: -4192024247819946906}
   m_Layer: 3
   m_Name: Bullet
   m_TagString: Player_Weapon_ATK
@@ -162,3 +163,18 @@ MonoBehaviour:
   tags:
   - Enemy
   - Ally
+--- !u!114 &-4192024247819946906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5050974976311981045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974439619fa5ea84caba0d53470f1a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  damage: 10
+  lifeTime: 2

@@ -1,23 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Pistol : WeaponBase
+public class Pistol : Weapon
 {
-    // Shoot will spawn a new bullet, provided enough time has passed compared to our fireDelay.
-    public override void Shoot()
+    private void Awake()
     {
-        // get the current time
-        float currentTime = Time.time;
-
-        // if enough time has passed since our last shot compared to our fireDelay, spawn our bullet
-        if (currentTime - lastFiredTime > fireDelay)
-        {
-            // create our bullet
-            GameObject newBullet = Instantiate(bullet, bulletSpawnPoint.position, transform.rotation);
-
-            // update our shooting state
-            lastFiredTime = currentTime;
-        }
+        weaponName = "Pistol";
+        maxAmmo = 15;
+        currentAmmo = 15;
+        reserveAmmo = 45;
+        fireRate = 0.5f;
+        damage = 20f;
     }
 }
