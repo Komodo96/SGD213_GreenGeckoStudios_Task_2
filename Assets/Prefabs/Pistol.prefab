@@ -113,7 +113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1813095555592286063
 Transform:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Pistol
   maxAmmo: 30
-  currentAmmo: 83
+  currentAmmo: 11
   reserveAmmo: 90
   fireRate: 0.2
   damage: 10
