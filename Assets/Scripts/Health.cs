@@ -28,6 +28,15 @@ public class Health : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        if (Input.GetKey(KeyCode.T))
+        {
+            TakeDamage(10);
+        }
+
+    }
+
     void UpdateHealthUI()
     {
         if (healthSlider != null)

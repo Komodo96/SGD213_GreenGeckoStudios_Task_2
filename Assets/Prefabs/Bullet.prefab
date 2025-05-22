@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4968271041307169690}
   - component: {fileID: 2990891681458881705}
   - component: {fileID: 1866291938193150852}
-  - component: {fileID: 1209926313685281134}
   m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1209926313685281134
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4693175790786352535}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &5050974976311981045
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,6 +95,7 @@ GameObject:
   - component: {fileID: 4826023875801687356}
   - component: {fileID: 5112387452230084410}
   - component: {fileID: -4192024247819946906}
+  - component: {fileID: 9084800891031803524}
   m_Layer: 3
   m_Name: Bullet
   m_TagString: Player_Weapon_ATK
@@ -141,11 +127,11 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5050974976311981045}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
+  m_Height: 2.46
+  m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5112387452230084410
 MonoBehaviour:
@@ -178,3 +164,19 @@ MonoBehaviour:
   speed: 20
   damage: 10
   lifeTime: 2
+--- !u!54 &9084800891031803524
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5050974976311981045}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

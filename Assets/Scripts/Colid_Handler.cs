@@ -19,7 +19,7 @@ public class Colid_Handler : MonoBehaviour
     private List<string> tags;
 
     //On Colliding with another object
-    void OnTriggerEnter3D(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         bool TagInList = tags.Contains(other.gameObject.tag);
 

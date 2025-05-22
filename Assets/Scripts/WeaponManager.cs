@@ -6,6 +6,8 @@ public class WeaponManager : MonoBehaviour
 {
     public Weapon[] weapons;
     private int currentWeaponIndex = 0;
+
+    [SerializeField]
     private Weapon currentWeapon;
 
     public TextMeshProUGUI ammoText;
@@ -20,7 +22,11 @@ public class WeaponManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1)) SwitchWeapon(0);
         if (Input.GetKeyDown(KeyCode.Alpha2)) SwitchWeapon(1);
 
-        if (Input.GetButton("Fire1")) currentWeapon?.Shoot();
+        if (Input.GetKeyDown(KeyCode.Y)) 
+        {
+            Debug.Log("shot");
+            currentWeapon?.Shoot();
+        }
 
         if (Input.GetKeyDown(KeyCode.R)) currentWeapon?.Reload();
 

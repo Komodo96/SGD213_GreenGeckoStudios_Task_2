@@ -14,20 +14,21 @@ public abstract class Weapon : MonoBehaviour
     public float bulletForce = 500f;
 
     protected bool isReloading = false;
-    protected float nextTimeToFire = 0f;
+    protected float nextTimeToFire = -1f;
 
     public Transform firePoint;
     public ParticleSystem muzzleFlash;
 
     public virtual void Shoot()
     {
-        if (isReloading || Time.time < nextTimeToFire || currentAmmo <= 0)
-            return;
+        //if (isReloading || Time.time < nextTimeToFire || currentAmmo <= 0)
+        //    return;
 
         nextTimeToFire = Time.time + fireRate;
         currentAmmo--;
+        Debug.Log("Something");
 
-        muzzleFlash?.Play();
+        //muzzleFlash?.Play();
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
