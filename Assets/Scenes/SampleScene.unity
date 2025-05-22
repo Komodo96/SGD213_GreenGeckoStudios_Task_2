@@ -1221,7 +1221,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4145107056214083341, guid: 0cad191e0d12a954499507c4b5620871, type: 3}
   m_PrefabInstance: {fileID: 1595075923}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1299511589
+--- !u!114 &1299511596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1234,9 +1234,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 705619621}
-  detectionRange: 20
+  detectionRange: 15
   lookSpeed: 5
-  patrolRadius: 20
+  patrolRadius: 10
   patrolWaitTime: 2
 --- !u!1 &1566290559
 GameObject:
@@ -1403,6 +1403,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 7688481408260863423, guid: 0cad191e0d12a954499507c4b5620871, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4145107056214083341, guid: 0cad191e0d12a954499507c4b5620871, type: 3}
@@ -1654,6 +1658,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 7688481408260863423, guid: 0cad191e0d12a954499507c4b5620871, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4145107056214083341, guid: 0cad191e0d12a954499507c4b5620871, type: 3}
@@ -1840,7 +1848,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4145107056214083341, guid: 0cad191e0d12a954499507c4b5620871, type: 3}
   m_PrefabInstance: {fileID: 1571792152}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2105302967
+--- !u!114 &2105302974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1853,9 +1861,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 705619621}
-  detectionRange: 20
+  detectionRange: 15
   lookSpeed: 5
-  patrolRadius: 20
+  patrolRadius: 10
   patrolWaitTime: 2
 --- !u!1 &2112063427
 GameObject:
@@ -1956,6 +1964,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 7688481408260863423, guid: 0cad191e0d12a954499507c4b5620871, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4145107056214083341, guid: 0cad191e0d12a954499507c4b5620871, type: 3}
@@ -2007,7 +2019,7 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &4145107055030417989
+--- !u!114 &4145107055030417996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2020,9 +2032,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 705619621}
-  detectionRange: 20
+  detectionRange: 15
   lookSpeed: 5
-  patrolRadius: 20
+  patrolRadius: 10
   patrolWaitTime: 2
 --- !u!1001 &7031031980535632930
 PrefabInstance:
