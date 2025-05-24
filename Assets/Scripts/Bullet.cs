@@ -8,8 +8,10 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, lifeTime); // Destroy bullet after X seconds
+        // Destroy bullet after X seconds
+        Destroy(gameObject, lifeTime); 
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -18,6 +20,7 @@ public class Bullet : MonoBehaviour
             target.TakeDamage(damage);
         }
 
-        Destroy(gameObject); // Destroy bullet on impact
+        // Destroy bullet on impact
+        Destroy(gameObject); 
     }
 }

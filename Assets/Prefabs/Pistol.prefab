@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Pistol
   maxAmmo: 30
-  currentAmmo: -760
+  currentAmmo: 30
   reserveAmmo: 90
   fireRate: 0.2
   damage: 10
