@@ -1801,10 +1801,6 @@ PrefabInstance:
       propertyPath: firePoint
       value: 
       objectReference: {fileID: 1588778474}
-    - target: {fileID: -2128578378532105551, guid: 4c0a4c57be5350f478c4a670234b2739, type: 3}
-      propertyPath: currentAmmo
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: -258660290968235436, guid: 4c0a4c57be5350f478c4a670234b2739, type: 3}
       propertyPath: healthSlider
       value: 

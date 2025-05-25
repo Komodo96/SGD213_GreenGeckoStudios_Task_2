@@ -1,15 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Health : MonoBehaviour
 {
-    public float maxHealth = 100f;
+    [SerializeField] 
+    private float maxHealth = 100f;
+
+    [SerializeField]
     private float currentHealth;
 
-    public bool isPlayer = false;
+    [SerializeField] 
+    private bool isPlayer = false;
 
-    // UI
-    public Slider healthSlider; // Unity UI Slider for health bar
+    // UI health bar
+    [SerializeField] 
+    private Slider healthSlider; 
+
+    // Event invoked when health reaches zero (death)
+    public event Action OnDeath;
 
     private void Start()
     {
@@ -17,9 +26,12 @@ public class Health : MonoBehaviour
         UpdateHealthUI();
     }
 
+    // Call this to apply damage
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
+
         UpdateHealthUI();
 
         if (currentHealth <= 0f)
@@ -28,16 +40,16 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void Update()
+    private void Update()
     {
-        if (Input.GetKey(KeyCode.T))
+        // For testing: only player can take damage on pressing T once
+        if (isPlayer && Input.GetKeyDown(KeyCode.T))
         {
-            TakeDamage(10);
+            TakeDamage(10f);
         }
-
     }
 
-    void UpdateHealthUI()
+    private void UpdateHealthUI()
     {
         if (healthSlider != null)
         {
@@ -47,10 +59,13 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        // Fire death event, so other scripts can respond (animations, sounds, etc.)
+        OnDeath?.Invoke();
+
         if (isPlayer)
         {
             Debug.Log("Player Died!");
-            // Disable movement, show game over screen, etc.
+            // TODO: Disable movement, show game over screen, etc.
         }
         else
         {

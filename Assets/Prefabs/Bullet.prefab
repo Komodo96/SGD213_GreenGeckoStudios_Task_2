@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4968271041307169690}
   - component: {fileID: 2990891681458881705}
   - component: {fileID: 1866291938193150852}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4826023875801687356}
   - component: {fileID: -4192024247819946906}
   - component: {fileID: 9084800891031803524}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bullet
   m_TagString: Player_Weapon_ATK
   m_Icon: {fileID: 0}
@@ -126,10 +126,10 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5050974976311981045}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.46
+  m_Radius: 0.59
+  m_Height: 2.83
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-4192024247819946906

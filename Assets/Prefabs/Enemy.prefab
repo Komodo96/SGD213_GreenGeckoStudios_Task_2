@@ -491,11 +491,10 @@ GameObject:
   - component: {fileID: 4145107056214083340}
   - component: {fileID: 4145107056214083343}
   - component: {fileID: 4145107056214083342}
-  - component: {fileID: 1344232626040545569}
   - component: {fileID: 2144412207828314843}
   - component: {fileID: 2700534750505339819}
-  - component: {fileID: 4145107055030417980}
   - component: {fileID: 4145107055030417988}
+  - component: {fileID: -81203126100201155}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -518,7 +517,7 @@ Transform:
   - {fileID: 2752165920295042210}
   - {fileID: 509563107}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4145107056214083340
 MeshFilter:
@@ -578,25 +577,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4145107056214083337}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1344232626040545569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4145107056214083337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bae19fe1e47725418a26afc8776a902, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!114 &2144412207828314843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,7 +595,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583e54e0c2d3c8a478a2e79f856f3743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
+  currentHealth: 10
   isPlayer: 0
   healthSlider: {fileID: 1813410033529275077}
 --- !u!114 &2700534750505339819
@@ -624,24 +611,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e79146079e316148bd5d5333a7d4806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 7031031981239579271, guid: 4c0a4c57be5350f478c4a670234b2739, type: 3}
+  player: {fileID: 0}
   detectionRange: 15
   lookSpeed: 5
   patrolRadius: 10
   patrolWaitTime: 2
---- !u!114 &4145107055030417980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4145107056214083337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bae19fe1e47725418a26afc8776a902, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!195 &4145107055030417988
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -664,6 +638,22 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!54 &-81203126100201155
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4145107056214083337}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7481482080404443768
 GameObject:
   m_ObjectHideFlags: 0

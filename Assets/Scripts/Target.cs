@@ -1,33 +1,33 @@
-using UnityEngine;
-using System;
+//using UnityEngine;
+//using System;
 
-public class Target : MonoBehaviour
-{
-    public float maxHealth = 100f;
-    private float currentHealth;
+//public class Target : MonoBehaviour
+//{
+//    public float maxHealth = 100f;
+//    private float currentHealth;
 
-    public event Action OnDeath;
+//    public event Action OnDeath;
 
-    private void Awake()
-    {
-        currentHealth = maxHealth;
-    }
+//    private void Awake()
+//    {
+//        currentHealth = maxHealth;
+//    }
 
-    public void TakeDamage(float amount)
-    {
-        currentHealth -= amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
+//    public void TakeDamage(float amount)
+//    {
+//        currentHealth -= amount;
+//        currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
 
-        if (currentHealth <= 0f)
-        {
-            Die();
-        }
-    }
+//        if (currentHealth <= 0f)
+//        {
+//            Die();
+//        }
+//    }
 
-    void Die()
-    {
-        OnDeath?.Invoke();
-        // Can add death animation or effects here
-        Destroy(gameObject);
-    }
-}
+//    void Die()
+//    {
+//        OnDeath?.Invoke();
+//        // Can add death animation or effects here
+//        Destroy(gameObject);
+//    }
+//}

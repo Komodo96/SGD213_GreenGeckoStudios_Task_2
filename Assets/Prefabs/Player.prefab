@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
   isPlayer: 1
   healthSlider: {fileID: 0}
 --- !u!114 &7031031981239579267
@@ -232,9 +233,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Pistol
-  maxAmmo: 30
-  currentAmmo: 90
-  reserveAmmo: 90
   fireRate: 0.2
   damage: 10
   reloadTime: 1.5
@@ -255,9 +253,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: AssaultRifle
-  maxAmmo: 30
-  currentAmmo: 90
-  reserveAmmo: 90
   fireRate: 0.2
   damage: 10
   reloadTime: 1.5
