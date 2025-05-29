@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Assault Rifle
-  fireRate: 1
+  fireRate: 0.2
   damage: 10
   reloadTime: 1.5
   bulletPrefab: {fileID: 5050974976311981045, guid: 31cfb315a6af9744f967d2fb57f98c18, type: 3}

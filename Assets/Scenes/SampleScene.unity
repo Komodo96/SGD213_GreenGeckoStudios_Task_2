@@ -1603,6 +1603,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3667002012049470995, guid: 4c0a4c57be5350f478c4a670234b2739, type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -258660290968235436, guid: 4c0a4c57be5350f478c4a670234b2739, type: 3}
       propertyPath: healthSlider
       value: 

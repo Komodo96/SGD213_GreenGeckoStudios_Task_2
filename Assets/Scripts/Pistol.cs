@@ -8,5 +8,6 @@ public class Pistol : Weapon
         reserveAmmo = 45;
         fireRate = 0.5f;
         damage = 20f;
+        isFullAuto = false; // explicitly set or omit since default is false
     }
 }

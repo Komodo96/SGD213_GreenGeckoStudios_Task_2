@@ -44,11 +44,26 @@ public class WeaponManager : MonoBehaviour
             UpdateAmmoUI();
         }
 
-        // Checks for the fire key to shoot with the current weapon
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (currentWeapon != null)
         {
-            currentWeapon?.Shoot();
-            UpdateAmmoUI(); // Update ammo display after shooting
+            if (currentWeapon.IsFullAuto)
+            {
+                // Fire while holding mouse button down
+                if (Input.GetKey(KeyCode.Mouse0))
+                {
+                    currentWeapon.Shoot();
+                    UpdateAmmoUI();
+                }
+            }
+            else
+            {
+                // Semi-auto fire only on mouse button down
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    currentWeapon.Shoot();
+                    UpdateAmmoUI();
+                }
+            }
         }
 
         // Checks for the reload key to reload the current weapon

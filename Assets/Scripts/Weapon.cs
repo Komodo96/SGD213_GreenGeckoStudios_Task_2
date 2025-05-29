@@ -42,6 +42,9 @@ public abstract class Weapon : MonoBehaviour
     // Timer to enforce fire rate
     protected float nextTimeToFire = -1f;
 
+    // Sets the weapon to be Fully Automatic or Semi Auto
+    protected bool isFullAuto = false;
+
     // Position to spawn bullets from
     public Transform firePoint;
 
@@ -53,6 +56,8 @@ public abstract class Weapon : MonoBehaviour
     public int CurrentAmmo => currentAmmo;
     public int ReserveAmmo => reserveAmmo;
     public string WeaponName => weaponName;
+
+    public bool IsFullAuto => isFullAuto;
 
     // Fires a bullet if not reloading, enough time has passed, and there is ammo.
     public virtual void Shoot()
