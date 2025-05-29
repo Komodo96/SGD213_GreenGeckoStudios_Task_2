@@ -20,25 +20,27 @@ public class Bullet : MonoBehaviour
 
         Destroy(gameObject, lifeTime);
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         GameObject hitObject = collision.gameObject;
 
-        // Check tag on hit object or any of its parents
+        Debug.Log($"[BULLET] Collided with: {hitObject.name}, Layer: {LayerMask.LayerToName(hitObject.layer)}, Tag: {hitObject.tag}");
+
         if (HasPlayerTag(hitObject))
         {
             Debug.Log("Hit player or its child - ignoring damage.");
             return;
         }
 
-        Debug.Log($"Bullet hit: {hitObject.name}, Tag: {hitObject.tag}");
-
-        Health health = collision.collider.GetComponentInParent<Health>();
-        if (health != null)
+        IHealth healthComponent = collision.collider.GetComponentInParent<IHealth>();
+        if (healthComponent != null)
         {
-            Debug.Log($"Dealing damage to: {health.gameObject.name}");
-            health.TakeDamage(damage);
+            Debug.Log($"[BULLET] Dealing {damage} damage to: {hitObject.name}");
+            healthComponent.TakeDamage(damage);
+        }
+        else
+        {
+            Debug.Log("[BULLET] No IHealth component found on hit object or its parents.");
         }
 
         Destroy(gameObject);

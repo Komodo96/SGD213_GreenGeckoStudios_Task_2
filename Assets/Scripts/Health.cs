@@ -2,20 +2,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class Health : MonoBehaviour
+// Implements the IHealth interface so this component can take damage generically
+public class Health : MonoBehaviour, IHealth
 {
-    [SerializeField] 
+    [SerializeField]
     private float maxHealth = 100f;
 
     [SerializeField]
     private float currentHealth;
 
-    [SerializeField] 
+    [SerializeField]
     private bool isPlayer = false;
 
     // UI health bar
-    [SerializeField] 
-    private Slider healthSlider; 
+    [SerializeField]
+    private Slider healthSlider;
 
     // Event invoked when health reaches zero (death)
     public event Action OnDeath;
